@@ -135,6 +135,4 @@ export PATH="$PATH:/opt/mssql-tools18/bin"
 eval "$(starship init zsh)"
 
 # Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
