@@ -76,7 +76,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 zsh-autosuggestions
-git ubuntu history vscode)
+git ubuntu vscode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,6 +108,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias docker-desktop="systemctl --user restart docker-desktop" 
+alias bat="batcat"
 
 # Load bash aliases if present
 if [ -f ~/.bash_aliases ]; then
@@ -131,3 +133,8 @@ export PATH="$PATH:/opt/mssql-tools18/bin"
 # ~/.zshrc
 
 eval "$(starship init zsh)"
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
