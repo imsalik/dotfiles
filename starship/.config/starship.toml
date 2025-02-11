@@ -44,14 +44,14 @@ format = '([$all_status$ahead_behind]($style) )'
 ahead = "⇡${count}"
 behind = "⇣${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-renamed = "  "
-deleted = " 﫧"
-stashed = "  "
-modified = "  "
-untracked = "  "
-staged = " + "
-conflicted = "  "
-up_to_date = " ✓ "
+renamed = " "
+deleted = "﫧"
+stashed = " "
+modified = " "
+untracked = " "
+staged = "+ "
+conflicted = " "
+up_to_date = "✓ "
 
 [git_state]
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
@@ -65,7 +65,7 @@ style = "bold yellow"
 [os]
 disabled = false
 style = "bold sapphire"
-symbols.Ubuntu = "  "
+symbols.Ubuntu = " "
 
 [time]
 disabled = false
