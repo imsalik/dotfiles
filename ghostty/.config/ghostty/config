@@ -1,0 +1,19 @@
+font-family = FiraCode Nerd Font Mono 
+font-style = Regular
+font-size = 12 
+font-thicken = true
+
+cursor-style = block
+cursor-style-blink = false
+
+shell-integration = none 
+shell-integration-features = no-cursor
+
+theme = catppuccin-mocha 
+
+confirm-close-surface = false
+
+background-opacity= 0.98 
+background-blur= true
+
+window-decoration=none 
