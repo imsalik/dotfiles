@@ -1,19 +1,22 @@
 font-family = FiraCode Nerd Font Mono 
 font-style = Regular
-font-size = 12 
-font-thicken = true
+font-size = 14
 
 cursor-style = block
-cursor-style-blink = false
+cursor-color= #f5c2e7
 
-shell-integration = none 
+shell-integration = zsh 
 shell-integration-features = no-cursor
 
 theme = catppuccin-mocha 
 
 confirm-close-surface = false
 
-background-opacity= 0.98 
-background-blur= true
+background-opacity= 0.95 
+background-blur= 90
 
-window-decoration=none 
+window-decoration=none
+
+app-notifications= no-clipboard-copy
+
+maximize= true
