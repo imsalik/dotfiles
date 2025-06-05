@@ -18,5 +18,3 @@ background-blur= 90
 window-decoration=none
 
 app-notifications= no-clipboard-copy
-
-maximize= true
