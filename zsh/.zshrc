@@ -2,7 +2,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 plugins=(
 zsh-autosuggestions
-git ubuntu vscode)
+git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -43,6 +43,6 @@ export CLOUD_ML_REGION=us-east5
 export ANTHROPIC_VERTEX_PROJECT_ID=cherre-sandbox
 
 # something for homebrew, only using it for kubie, i think
-. "$HOME/.local/bin/env"
-test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
-test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+#. "$HOME/.local/bin/env"
+#test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
+#test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

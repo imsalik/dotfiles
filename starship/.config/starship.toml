@@ -66,6 +66,7 @@ style = "bold yellow"
 disabled = false
 style = "bold sapphire"
 symbols.Ubuntu = " "
+symbols.Arch = ""
 
 [time]
 disabled = false
