@@ -87,12 +87,12 @@ fi
 #--------------------------------------------------------------------------------#
 # STEP 4: CLONE AND STOW DOTFILES
 #--------------------------------------------------------------------------------#
-info "Cloning and stowing dotfiles..."
+info "Cloning and stowing dotfiles (arch branch)..."
 if [ ! -d "$HOME/.dotfiles" ]; then
-    git clone https://github.com/muhammad-salik-salam/dotfiles.git ~/.dotfiles
+    git clone -b arch git@github.com:muhammad-salik-salam/dotfiles.git ~/.dotfiles
 else
-    echo "Dotfiles directory already exists. Pulling latest changes."
-    (cd ~/.dotfiles && git pull)
+    echo "Dotfiles directory already exists. Switching to arch branch and pulling latest changes."
+    (cd ~/.dotfiles && git checkout arch && git pull)
 fi
 
 # Stow the configurations from dotfiles
