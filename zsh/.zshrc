@@ -30,7 +30,8 @@ export PATH="$PATH:/opt/mssql-tools18/bin"
 eval "$(starship init zsh)"
 
 # Set up fzf key bindings and fuzzy completion
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/share/fzf/key-bindings.zsh
+
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 export NVM_DIR="$HOME/.nvm"
