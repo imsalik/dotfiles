@@ -134,7 +134,11 @@ fi
 # STEP 7: INSTALL AUR AND OTHER PACKAGES
 #--------------------------------------------------------------------------------#
 info "Installing packages using yay"
-yay -S --noconfirm google-chrome google-cloud-cli
+yay -S --noconfirm google-chrome \
+	google-cloud-cli \
+	slack-desktop \
+	docker-desktop \
+	visual-studio-code-bin
 
 #--------------------------------------------------------------------------------#
 # FINAL STEPS
