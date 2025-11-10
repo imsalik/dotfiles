@@ -20,7 +20,7 @@ return {
     },
   },
 
-  -- Optional: Add venv-selector for easy virtual environment switching
+  -- Add venv-selector for easy virtual environment switching
   {
     "linux-cultist/venv-selector.nvim",
     dependencies = { "neovim/nvim-lspconfig", "nvim-telescope/telescope.nvim" },
