@@ -8,6 +8,10 @@ source $ZSH/oh-my-zsh.sh
 
 alias docker-desktop="systemctl --user restart docker-desktop" 
 alias bat="batcat"
+alias gs="git status"
+alias gcm="git checkout master"
+alias gc="git commit -m"
+alias ga="git add ."
 
 # Load bash aliases if present
 if [ -f ~/.bash_aliases ]; then
