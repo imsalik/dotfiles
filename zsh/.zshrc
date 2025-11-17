@@ -11,7 +11,9 @@ alias bat="batcat"
 alias gs="git status"
 alias gcm="git checkout master"
 alias gc="git commit -m"
-alias ga="git add ."
+alias ga="git add"
+alias gp="git pull"
+alias gP="git push"
 
 # Load bash aliases if present
 if [ -f ~/.bash_aliases ]; then
