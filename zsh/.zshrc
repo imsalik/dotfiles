@@ -47,6 +47,8 @@ export NVM_DIR="$HOME/.nvm"
 export CLAUDE_CODE_USE_VERTEX=1
 export CLOUD_ML_REGION=us-east5
 export ANTHROPIC_VERTEX_PROJECT_ID=cherre-sandbox
+alias claude="~/.claude/local/claude"
+
 
 # something for homebrew, only using it for kubie, i think
 . "$HOME/.local/bin/env"
