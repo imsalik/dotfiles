@@ -58,3 +58,6 @@ export GOOGLE_CLOUD_LOCATION=global
 # something for homebrew, only using it for kubie, i think
 . "$HOME/.local/bin/env"
 test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# opencode
+export PATH=/home/saliksalam/.opencode/bin:$PATH
