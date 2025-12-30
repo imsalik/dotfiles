@@ -15,6 +15,7 @@ alias ga="git add"
 alias gp="git pull"
 alias gP="git push"
 
+alias ls='lsd'
 # Load bash aliases if present
 if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
