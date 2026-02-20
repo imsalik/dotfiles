@@ -44,17 +44,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# for claude code to run in vertex
-export CLAUDE_CODE_USE_VERTEX=1
-export CLOUD_ML_REGION=us-east5
-export ANTHROPIC_VERTEX_PROJECT_ID=cherre-sandbox
+# calude code
 alias claude="~/.claude/local/claude"
-
-# for gemini  CLI
-export GOOGLE_GENAI_USE_VERTEXAI=true
-export GOOGLE_CLOUD_PROJECT=cherre-sandbox
-export GOOGLE_CLOUD_LOCATION=global
-
 
 # something for homebrew, only using it for kubie, i think
 . "$HOME/.local/bin/env"
