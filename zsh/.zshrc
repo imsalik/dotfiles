@@ -9,13 +9,12 @@ source $ZSH/oh-my-zsh.sh
 alias docker-desktop="systemctl --user restart docker-desktop" 
 alias bat="batcat"
 alias gs="git status"
-alias gcm="git checkout master"
 alias gc="git commit -m"
 alias ga="git add"
 alias gp="git pull"
 alias gP="git push"
-
 alias ls='lsd'
+
 # Load bash aliases if present
 if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
@@ -47,9 +46,6 @@ export NVM_DIR="$HOME/.nvm"
 # calude code
 alias claude="~/.claude/local/claude"
 
-# something for homebrew, only using it for kubie, i think
+# homebrew
 . "$HOME/.local/bin/env"
 test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# opencode
-export PATH=/home/saliksalam/.opencode/bin:$PATH
