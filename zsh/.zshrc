@@ -40,9 +40,3 @@ source /usr/share/fzf/key-bindings.zsh
 
 # Google Cloud configuration
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-
-# Claude Code (Anthropic) configuration
-# Configure Claude Code to use Google Cloud Vertex AI
-export CLAUDE_CODE_USE_VERTEX=1
-export CLOUD_ML_REGION=us-east5
-export ANTHROPIC_VERTEX_PROJECT_ID=cherre-sandbox
