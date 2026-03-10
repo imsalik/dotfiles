@@ -45,6 +45,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # calude code
 alias claude="~/.claude/local/claude"
+alias cc="claude --dangerously-skip-permissions"
 
 # homebrew
 . "$HOME/.local/bin/env"
