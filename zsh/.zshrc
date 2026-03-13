@@ -14,6 +14,7 @@ alias ga="git add"
 alias gp="git pull"
 alias gP="git push"
 alias ls='lsd'
+alias lg="lazygit"
 
 # Load bash aliases if present
 if [ -f ~/.bash_aliases ]; then
