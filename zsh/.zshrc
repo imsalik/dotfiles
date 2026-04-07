@@ -45,8 +45,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # calude code
-alias claude="~/.claude/local/claude"
+export PATH="$HOME/.claude/local:$PATH"
 alias cc="claude --dangerously-skip-permissions"
+export CLAUDE_CODE_NEW_INIT=1
 
 # homebrew
 . "$HOME/.local/bin/env"
