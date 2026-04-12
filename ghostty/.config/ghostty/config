@@ -12,8 +12,7 @@ shell-integration-features = no-cursor
 cursor-color = #f5c2e7
 
 # Transparency
-background-opacity = 0.9
-background-blur = true
+background-opacity = 1.0
 
 # Window
 window-decoration = true

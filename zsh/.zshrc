@@ -15,6 +15,7 @@ alias gp="git pull"
 alias gP="git push"
 alias ls='lsd'
 alias lg="lazygit"
+alias smux="~/personal/smux/bin/smux"
 
 # Load bash aliases if present
 if [ -f ~/.bash_aliases ]; then
@@ -48,7 +49,13 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.claude/local:$PATH"
 alias cc="claude --dangerously-skip-permissions"
 export CLAUDE_CODE_NEW_INIT=1
+export CLAUDE_CODE_NO_FLICKER=1
 
 # homebrew
 . "$HOME/.local/bin/env"
 test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+[ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
