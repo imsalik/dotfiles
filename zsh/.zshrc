@@ -22,11 +22,10 @@ if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
 
-# Pyenv configuration
+# Pyenv configuration (lazy: shims on PATH now, defer expensive init until `pyenv` is used)
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
+export PATH="$PYENV_ROOT/bin:$PYENV_ROOT/shims:$PATH"
+pyenv() { unset -f pyenv; eval "$(command pyenv init --path)"; eval "$(command pyenv init -)"; pyenv "$@"; }
 
 # Envman configuration
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
@@ -41,9 +40,20 @@ eval "$(starship init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
+# nvm (lazy: default node on PATH now, defer nvm.sh until `nvm` is first used)
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+if [ -s "$NVM_DIR/alias/default" ]; then
+  _nvm_default="$(cat "$NVM_DIR/alias/default")"
+  _nvm_default_bin="$NVM_DIR/versions/node/v${_nvm_default#v}/bin"
+  [ -d "$_nvm_default_bin" ] && export PATH="$_nvm_default_bin:$PATH"
+  unset _nvm_default _nvm_default_bin
+fi
+nvm() {
+  unset -f nvm
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  nvm "$@"
+}
 
 # calude code
 export PATH="$HOME/.claude/local:$PATH"
