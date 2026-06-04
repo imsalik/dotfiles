@@ -1,0 +1,4 @@
+# markdownlint config used by nvim-lint (markdownlint-cli2)
+# Keep all default rules, but stop flagging long lines (MD013/line-length).
+default: true
+MD013: false
