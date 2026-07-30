@@ -72,7 +72,7 @@ claude = [["state_icon", "workspace", "tab"], ["terminal_title_stripped"], ["age
 enabled = false
 
 [ui.toast]
-delivery = "system"
+delivery = "herdr"
 
 [experimental]
 pane_history = false
