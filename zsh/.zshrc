@@ -38,6 +38,9 @@ eval "$(starship init zsh)"
 
 # Set up fzf key bindings and fuzzy completion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# zoxide: smarter cd that learns your most-used dirs (`z <partial>`, `zi` interactive)
+eval "$(zoxide init zsh)"
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # nvm (lazy: default node on PATH now, defer nvm.sh until `nvm` is first used)
