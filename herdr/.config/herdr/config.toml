@@ -3,10 +3,6 @@ onboarding = false
 [theme]
 name = "catppuccin"
 
-[theme.custom]
-# Mocha: crust #11111b · mantle #181825 · base #1e1e2e (= "reset") · surface0 #313244
-panel_bg = "#313244"
-
 [keys]
 # Run herdr OUTSIDE tmux — ctrl+a is tmux's prefix too
 prefix = "ctrl+a"
