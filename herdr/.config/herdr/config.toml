@@ -1,8 +1,9 @@
 onboarding = false
 
 [theme]
-name = "catppuccin"
+name = "terminal"
 
+auto_switch = false
 [theme.custom]
 surface_dim = "#2a3350"
 
