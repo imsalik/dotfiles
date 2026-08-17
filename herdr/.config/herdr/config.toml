@@ -52,6 +52,15 @@ description = "goto (workspace switcher)"
 width = "90%"
 height = "85%"
 
+# Same switcher, opened straight into the agents scope (Tab still cycles).
+[[keys.command]]
+key = "prefix+a"
+type = "popup"
+command = "herdr-goto agent"
+description = "goto (agent switcher)"
+width = "90%"
+height = "85%"
+
 [[keys.command]]
 key = "prefix+shift+p"
 type = "popup"
@@ -67,18 +76,6 @@ command = "kate"
 description = "kate (kubernetes)"
 width = "95%"
 height = "90%"
-
-[[keys.command]]
-key = "prefix+f"
-type = "shell"
-command = "herdr plugin action invoke open-file-viewer --plugin herdr-file-viewer"
-description = "file viewer (split)"
-
-[[keys.command]]
-key = "prefix+shift+f"
-type = "shell"
-command = "herdr plugin action invoke open-file-viewer-tab --plugin herdr-file-viewer"
-description = "file viewer (tab)"
 
 [[keys.command]]
 key = "prefix+shift+g"
@@ -128,7 +125,7 @@ claude = [
 enabled = false
 
 [ui.toast]
-delivery = "herdr"
+delivery = "system"
 
 # tmux ran status-position top; keep notifications on the same edge.
 [ui.toast.herdr]
@@ -136,3 +133,6 @@ position = "top-right"
 
 [experimental]
 pane_history = false
+
+[update]
+channel = "preview"
