@@ -85,7 +85,42 @@ description = "lazygit"
 width = "90%"
 height = "90%"
 
+# floating scratch shell (session-modal, closes when the shell exits)
+[[keys.command]]
+key = "prefix+t"
+type = "popup"
+command = "zsh"
+description = "scratch shell"
+width = "80%"
+height = "80%"
+
+# hunk diff review (jhochenbaum.hunkdiff)
+[[keys.command]]
+key = "prefix+shift+h"
+type = "plugin_action"
+command = "jhochenbaum.hunkdiff.review"
+description = "hunk: review changes"
+
+[[keys.command]]
+key = "prefix+shift+s"
+type = "plugin_action"
+command = "jhochenbaum.hunkdiff.send-review"
+description = "hunk: send review to agent"
+
+[[keys.command]]
+key = "prefix+shift+c"
+type = "plugin_action"
+command = "jhochenbaum.hunkdiff.review:commit"
+description = "hunk: review the last commit"
+
+[[keys.command]]
+key = "prefix+shift+a"
+type = "plugin_action"
+command = "jhochenbaum.hunkdiff.review:staged"
+description = "hunk: review staged changes"
+
 [ui]
+window_title = "{hostname}: {workspace}"
 show_agent_labels_on_pane_borders = true
 agent_panel_sort = "spaces"
 accent = "magenta"
