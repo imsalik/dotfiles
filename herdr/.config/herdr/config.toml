@@ -131,10 +131,19 @@ sidebar_max_width = 38
 prompt_new_tab_name = false
 hide_tab_bar_when_single_tab = true
 
+# Right-aligned tab bar entries (0.8.2+). zoom shows a pill when a pane is
+# zoomed. datetime is 12h (%-I drops the leading zero).
+tab_bar_right = [
+  { type = "zoom" },
+  { type = "datetime", format = "%a %-I:%M %p" },
+]
+tab_bar_right_separator = "  ·  "
+
 # Catppuccin Mocha hex; fg takes literal hex only, and a bad value silently
 # reverts the whole table to defaults. Verify with `herdr config check`.
 # git_status is left unstyled on purpose: an fg override would collapse its
 # built-in green-ahead / red-behind colors into one.
+status_indicators = "symbols"
 [ui.sidebar.spaces]
 row_gap = 1
 rows = [
