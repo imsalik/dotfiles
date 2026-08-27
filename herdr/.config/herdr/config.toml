@@ -128,7 +128,7 @@ copy_on_select = false
 
 sidebar_width = 30
 sidebar_max_width = 38
-prompt_new_tab_name = false
+prompt_new_tab_name = true
 hide_tab_bar_when_single_tab = true
 
 # Right-aligned tab bar entries (0.8.2+). zoom shows a pill when a pane is
