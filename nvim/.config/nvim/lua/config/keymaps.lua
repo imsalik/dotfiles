@@ -4,3 +4,8 @@
 
 -- Exit insert mode with jj
 vim.keymap.set("i", "jj", "<Esc>", { desc = "Exit insert mode" })
+
+-- Seamless <C-hjkl> nav between nvim splits and herdr panes. Loaded here (not
+-- in the plugin spec) so it wins over LazyVim's default <C-w> window maps,
+-- which are set on VeryLazy before plugin config runs.
+dofile(vim.fn.stdpath("config") .. "/lua/herdr-nav.lua")

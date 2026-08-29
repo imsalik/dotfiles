@@ -30,11 +30,8 @@ previous_tab = "prefix+p"
 rename_pane = 'prefix+<'
 new_worktree = "prefix+g"
 
-# Prefix-based so nvim keeps ctrl+h/j/k/l for its own splits
-focus_pane_left = "prefix+h"
-focus_pane_down = "prefix+j"
-focus_pane_up = "prefix+k"
-focus_pane_right = "prefix+l"
+# ctrl+h/j/k/l pane focus is routed through vim-herdr-navigation (see
+# [[keys.command]] below) so it crosses seamlessly into nvim splits.
 
 # Unbound by default; arrows avoid prefix+shift+k (kate)
 swap_pane_left = "prefix+shift+left"
@@ -93,6 +90,32 @@ command = "zsh"
 description = "scratch shell"
 width = "80%"
 height = "80%"
+
+# Seamless nvim<->herdr pane focus. navigate.sh forwards into nvim when the
+# focused pane runs vim, else moves herdr focus.
+[[keys.command]]
+key = "ctrl+h"
+type = "plugin_action"
+command = "vim-herdr-navigation.left"
+description = "nav: focus left (nvim-aware)"
+
+[[keys.command]]
+key = "ctrl+j"
+type = "plugin_action"
+command = "vim-herdr-navigation.down"
+description = "nav: focus down (nvim-aware)"
+
+[[keys.command]]
+key = "ctrl+k"
+type = "plugin_action"
+command = "vim-herdr-navigation.up"
+description = "nav: focus up (nvim-aware)"
+
+[[keys.command]]
+key = "ctrl+l"
+type = "plugin_action"
+command = "vim-herdr-navigation.right"
+description = "nav: focus right (nvim-aware)"
 
 [[keys.command]]
 key = "prefix+shift+h"
