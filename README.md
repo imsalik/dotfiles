@@ -29,6 +29,13 @@ If that directory doesn't exist yet, plain `stow herdr` folds the whole tree and
 symlinks `~/.config/herdr` into this repo, so herdr then writes its logs and
 sockets here. `--no-folding` creates a real directory and symlinks only
 `config.toml`.
+
+### herdr-app (desktop app)
+
+Plain stow, but create the runtime dirs first so stow never folds them: `mkdir -p ~/.config/herdr-app/{mods,themes,projects} && stow herdr-app`. `~/.config/herdr-app` holds runtime state, and each mod must be a directory link (not per-file links) because the app requires relative imports like `./map.js` to resolve inside the app dir.
+
+The app doesn't watch symlink targets: after editing a file here, run `touch -h` on its link in `~/.config/herdr-app` to reload. The projects/spaces/agents mods and the wrangler layout live in `~/personal/wrangler` (installed by its own `install.sh`).
+
 ## How it works
 Stow creates symlinks from dotfiles to your home directory:
 - ```~/.dotfiles/tmux/.tmux.conf → ~/.tmux.conf```
