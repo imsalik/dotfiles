@@ -4,8 +4,5 @@
     "enabled": false
   },
   "font_size": 16,
-  "theme": "catppuccin-mocha",
-  "colors": {
-    "accent": "#cba6f7"
-  }
+  "theme": "catppuccin-mocha"
 }
