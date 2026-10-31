@@ -1,5 +1,6 @@
 // Keys after ctrl-a, grouped for the popup. `show` is the keycap text, `bind` maps keys to
-// actions (as in keys.json); a lone `run` binds `show` itself.
+// actions (as in keys.json); a lone `run` binds `show` itself. Installed mods add groups of their own
+// with a mods/<name>/prefix.json ({ title, items } in this shape); these keys win over theirs.
 export const GROUPS = [
   { title: "Tabs", items: [
     { show: "c", label: "New tab", run: "tab.new" },
@@ -21,8 +22,6 @@ export const GROUPS = [
     { show: "o", label: "Picker", bind: { o: "mod.open:picker", i: "mod.open:picker", w: "mod.open:picker" } },
     { show: "⇧N", label: "New space", bind: { "shift-n": "space.new" } },
     { show: "⇧W", label: "Rename space", bind: { "shift-w": "space.rename" } },
-    { show: "g", label: "New worktree", run: "projects.worktree" },
-    { show: "⇧A", label: "New agent", bind: { "shift-a": "projects.compose" } },
     { show: "⇧D", label: "Close space", bind: { "shift-d": "space.close" } },
   ] },
   { title: "Popups", items: [
@@ -30,8 +29,6 @@ export const GROUPS = [
     { show: "⇧P", label: "ports", bind: { "shift-p": "mod.open:popup-ports" } },
     { show: "⇧K", label: "kate", bind: { "shift-k": "mod.open:popup-kate" } },
     { show: "t", label: "Scratch shell", run: "mod.open:popup-shell" },
-    { show: "⇧O", label: "Projects", bind: { "shift-o": "projects.pick" } },
-    { show: "⇧S", label: "Save layout", bind: { "shift-s": "projects.save" } },
   ] },
   { title: "App", items: [
     { show: "b", label: "Sidebar", run: "layout.toggle:sidebar" },
@@ -42,7 +39,14 @@ export const GROUPS = [
   ] },
 ];
 
-export const MAP = Object.assign(
+// Overrides for installed mods' prefix keys, by mod folder: a key to null hides it, a key to an action
+// binds it there instead of the mod's key, e.g. { projects: { "shift-a": null, a: "projects.compose" } }.
+export const MODS = {};
+
+/** Keys to actions for groups like GROUPS. */
+export const mapOf = (groups) => Object.assign(
   {},
-  ...GROUPS.flatMap((g) => g.items).map((i) => ({ ...(i.run ? { [i.show]: i.run } : {}), ...i.bind })),
+  ...groups.flatMap((g) => g.items).map((i) => ({ ...(i.run ? { [i.show]: i.run } : {}), ...i.bind })),
 );
+
+export const MAP = mapOf(GROUPS);
