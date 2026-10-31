@@ -68,7 +68,7 @@
     "ctrl-shift-8": "space.select:8",
     "ctrl-shift-9": "space.select:9",
     "ctrl-a": "mod.open:prefix",
-    "ctrl-alt-o": "mod.open:projects"
+    "ctrl-alt-o": "mod.open:projects-ui"
   },
   "terminal": {
     "ctrl-backspace": "send:\u0017",

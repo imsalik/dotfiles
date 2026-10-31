@@ -21,7 +21,8 @@ export const GROUPS = [
     { show: "o", label: "Picker", bind: { o: "mod.open:picker", i: "mod.open:picker", w: "mod.open:picker" } },
     { show: "⇧N", label: "New space", bind: { "shift-n": "space.new" } },
     { show: "⇧W", label: "Rename space", bind: { "shift-w": "space.rename" } },
-    { show: "g", label: "New worktree", run: "mod.open:worktree" },
+    { show: "g", label: "New worktree", run: "projects.worktree" },
+    { show: "a", label: "New agent", run: "projects.compose" },
     { show: "⇧D", label: "Close space", bind: { "shift-d": "space.close" } },
   ] },
   { title: "Popups", items: [
@@ -29,7 +30,7 @@ export const GROUPS = [
     { show: "⇧P", label: "ports", bind: { "shift-p": "mod.open:popup-ports" } },
     { show: "⇧K", label: "kate", bind: { "shift-k": "mod.open:popup-kate" } },
     { show: "t", label: "Scratch shell", run: "mod.open:popup-shell" },
-    { show: "⇧O", label: "Projects", bind: { "shift-o": "mod.open:projects" } },
+    { show: "⇧O", label: "Projects", bind: { "shift-o": "mod.open:projects-ui" } },
     { show: "⇧S", label: "Save layout", bind: { "shift-s": "projects.save" } },
   ] },
   { title: "App", items: [
