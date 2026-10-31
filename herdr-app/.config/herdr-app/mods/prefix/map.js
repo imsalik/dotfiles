@@ -22,7 +22,7 @@ export const GROUPS = [
     { show: "⇧N", label: "New space", bind: { "shift-n": "space.new" } },
     { show: "⇧W", label: "Rename space", bind: { "shift-w": "space.rename" } },
     { show: "g", label: "New worktree", run: "projects.worktree" },
-    { show: "a", label: "New agent", run: "projects.compose" },
+    { show: "⇧A", label: "New agent", bind: { "shift-a": "projects.compose" } },
     { show: "⇧D", label: "Close space", bind: { "shift-d": "space.close" } },
   ] },
   { title: "Popups", items: [
@@ -30,7 +30,7 @@ export const GROUPS = [
     { show: "⇧P", label: "ports", bind: { "shift-p": "mod.open:popup-ports" } },
     { show: "⇧K", label: "kate", bind: { "shift-k": "mod.open:popup-kate" } },
     { show: "t", label: "Scratch shell", run: "mod.open:popup-shell" },
-    { show: "⇧O", label: "Projects", bind: { "shift-o": "mod.open:projects-ui" } },
+    { show: "⇧O", label: "Projects", bind: { "shift-o": "projects.pick" } },
     { show: "⇧S", label: "Save layout", bind: { "shift-s": "projects.save" } },
   ] },
   { title: "App", items: [
