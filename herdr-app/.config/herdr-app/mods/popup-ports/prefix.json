@@ -1,0 +1,3 @@
+{ "title": "Popups", "items": [
+  { "show": "⇧P", "label": "ports", "bind": { "shift-p": "mod.open:popup-ports" } }
+] }

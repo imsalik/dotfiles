@@ -1,0 +1,3 @@
+{ "title": "Popups", "items": [
+  { "show": "t", "label": "Scratch shell", "run": "mod.open:popup-shell" }
+] }
