@@ -180,6 +180,7 @@ delivery = "system"
 position = "top-right"
 
 [experimental]
+kitty_graphics = true
 pane_history = false
 
 [update]
