@@ -34,7 +34,7 @@ sockets here. `--no-folding` creates a real directory and symlinks only
 
 Plain stow, but create the runtime dirs first so stow never folds them: `mkdir -p ~/.config/herdr-app/{mods,themes,projects} && stow herdr-app`. `~/.config/herdr-app` holds runtime state, and each mod must be a directory link (not per-file links) because the app requires relative imports like `./map.js` to resolve inside the app dir.
 
-The app doesn't watch symlink targets: after editing a file here, run `touch -h` on its link in `~/.config/herdr-app` to reload. The projects/spaces/agents mods and the wrangler layout live in `~/personal/wrangler` (installed by its own `install.sh`).
+The app doesn't watch symlink targets: after editing a file here, run `touch -h` on its link in `~/.config/herdr-app` to reload. `settings.json` is not stowed (`.stow-local-ignore`), since the app's Settings screen writes it and wouldn't see its own changes through a link: copy it in once with `cp herdr-app/.config/herdr-app/settings.json ~/.config/herdr-app/`. The copy here is a seed and may lag. The projects/spaces/agents mods and the wrangler layout come from `~/personal/wrangler` (copied in, see its README).
 
 ## How it works
 Stow creates symlinks from dotfiles to your home directory:
